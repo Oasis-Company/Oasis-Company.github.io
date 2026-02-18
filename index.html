@@ -78,7 +78,7 @@
     <nav class="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo" role="banner">
-                <span class="logo-text">Oasis Company</span>
+                <span class="logo-text" data-i18n="logo">Oasis Company</span>
             </div>
             
             <!-- Mobile Menu Button -->
@@ -89,11 +89,11 @@
             </button>
             
             <div class="nav-menu" id="nav-menu" role="menu">
-                <a href="#hero" class="nav-link" role="menuitem" tabindex="0">Home</a>
-                <a href="#suborganizations" class="nav-link" role="menuitem" tabindex="0">Suborganizations</a>
-                <a href="#projects" class="nav-link" role="menuitem" tabindex="0">Projects</a>
-                <a href="#teams" class="nav-link" role="menuitem" tabindex="0">Teams</a>
-                <a href="#contact" class="nav-link" role="menuitem" tabindex="0">Contact</a>
+                <a href="#hero" class="nav-link" role="menuitem" tabindex="0" data-i18n="nav.home">Home</a>
+                <a href="#suborganizations" class="nav-link" role="menuitem" tabindex="0" data-i18n="nav.suborganizations">Suborganizations</a>
+                <a href="#projects" class="nav-link" role="menuitem" tabindex="0" data-i18n="nav.projects">Projects</a>
+                <a href="#teams" class="nav-link" role="menuitem" tabindex="0" data-i18n="nav.teams">Teams</a>
+                <a href="#contact" class="nav-link" role="menuitem" tabindex="0" data-i18n="nav.contact">Contact</a>
             </div>
             <div class="nav-controls">
                 <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" aria-pressed="false">
@@ -116,64 +116,64 @@
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
         <div class="hero-container">
-            <h1 class="hero-title">Oasis Company</h1>
-            <p class="hero-subtitle">Our mission is to create the universe</p>
-            <p class="hero-description">
+            <h1 class="hero-title" data-i18n="hero.title">Oasis Company</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Our mission is to create the universe</p>
+            <p class="hero-description" data-i18n="hero.description">
                 We explore from the essence of the world. Welcome to join us. We are Oasis Company.
             </p>
-            <a href="#suborganizations" class="cta-button">Explore Our Ecosystem</a>
+            <a href="#suborganizations" class="cta-button" data-i18n="hero.cta">Explore Our Ecosystem</a>
         </div>
     </section>
 
     <!-- Suborganizations Section -->
     <section id="suborganizations" class="suborganizations-section">
         <div class="container">
-            <h2 class="section-title">Suborganizations</h2>
-            <p class="section-subtitle">Our affiliated institutions</p>
-            <div class="suborganizations-grid">
+            <h2 class="section-title" data-i18n="suborganizations.title">Suborganizations</h2>
+            <p class="section-subtitle" data-i18n="suborganizations.subtitle">Our affiliated institutions</p>
+            <div class="suborganizations-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Wocon -->
                 <div class="suborg-card">
-                    <h3 class="suborg-name">Wocon</h3>
+                    <h3 class="suborg-name" data-i18n="suborganizations.wocon">Wocon</h3>
                     <div class="suborg-links">
-                        <a href="https://github.com/Wocon-org" target="_blank" class="suborg-link">GitHub</a>
-                        <a href="https://wocon-org.github.io/" target="_blank" class="suborg-link">Website</a>
-                        <a href="https://wocon.pages.dev/" target="_blank" class="suborg-link">App</a>
+                        <a href="https://github.com/Wocon-org" target="_blank" class="suborg-link" data-i18n="common.github">GitHub</a>
+                        <a href="https://wocon-org.github.io/" target="_blank" class="suborg-link" data-i18n="common.website">Website</a>
+                        <a href="https://wocon.pages.dev/" target="_blank" class="suborg-link" data-i18n="common.app">App</a>
                     </div>
                 </div>
 
                 <!-- OITS -->
                 <div class="suborg-card">
-                    <h3 class="suborg-name">OITS</h3>
+                    <h3 class="suborg-name" data-i18n="suborganizations.oits">OITS</h3>
                     <div class="suborg-links">
-                        <a href="https://github.com/Oasis-Institute-of-Technology-Science" target="_blank" class="suborg-link">GitHub</a>
-                        <a href="https://oasis-institute-of-technology-science.github.io/" target="_blank" class="suborg-link">Website</a>
+                        <a href="https://github.com/Oasis-Institute-of-Technology-Science" target="_blank" class="suborg-link" data-i18n="common.github">GitHub</a>
+                        <a href="https://oasis-institute-of-technology-science.github.io/" target="_blank" class="suborg-link" data-i18n="common.website">Website</a>
                     </div>
                 </div>
 
                 <!-- EME -->
                 <div class="suborg-card">
-                    <h3 class="suborg-name">EME</h3>
+                    <h3 class="suborg-name" data-i18n="suborganizations.eme">EME</h3>
                     <div class="suborg-links">
-                        <a href="https://github.com/Eidolon-org" target="_blank" class="suborg-link">GitHub</a>
-                        <a href="https://eidolon-org.github.io/" target="_blank" class="suborg-link">Website</a>
+                        <a href="https://github.com/Eidolon-org" target="_blank" class="suborg-link" data-i18n="common.github">GitHub</a>
+                        <a href="https://eidolon-org.github.io/" target="_blank" class="suborg-link" data-i18n="common.website">Website</a>
                     </div>
                 </div>
 
                 <!-- Oasis AI Lab -->
                 <div class="suborg-card">
-                    <h3 class="suborg-name">Oasis AI Lab</h3>
+                    <h3 class="suborg-name" data-i18n="suborganizations.aiLab">Oasis AI Lab</h3>
                     <div class="suborg-links">
-                        <span class="suborg-link disabled">GitHub: Coming Soon</span>
-                        <span class="suborg-link disabled">Website: Coming Soon</span>
+                        <span class="suborg-link disabled" data-i18n="common.githubComingSoon">GitHub: Coming Soon</span>
+                        <span class="suborg-link disabled" data-i18n="common.websiteComingSoon">Website: Coming Soon</span>
                     </div>
                 </div>
 
                 <!-- Oasis Android Studio -->
                 <div class="suborg-card">
-                    <h3 class="suborg-name">Oasis Android Studio</h3>
+                    <h3 class="suborg-name" data-i18n="suborganizations.androidStudio">Oasis Android Studio</h3>
                     <div class="suborg-links">
-                        <a href="https://github.com/OasisAndroidApp" target="_blank" class="suborg-link">GitHub</a>
-                        <span class="suborg-link disabled">Website: Coming Soon</span>
+                        <a href="https://github.com/OasisAndroidApp" target="_blank" class="suborg-link" data-i18n="common.github">GitHub</a>
+                        <span class="suborg-link disabled" data-i18n="common.websiteComingSoon">Website: Coming Soon</span>
                     </div>
                 </div>
             </div>
@@ -183,33 +183,33 @@
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <p class="section-subtitle">Our key initiatives</p>
-            <div class="projects-grid">
+            <h2 class="section-title" data-i18n="projects.title">Projects</h2>
+            <p class="section-subtitle" data-i18n="projects.subtitle">Our key initiatives</p>
+            <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Amar Engine -->
                 <div class="project-card">
-                    <h3 class="project-name">Amar Engine</h3>
+                    <h3 class="project-name" data-i18n="projects.amarEngine">Amar Engine</h3>
                     <div class="project-links">
-                        <a href="https://github.com/Oasis-Company/AMAR-Engine" target="_blank" class="project-link">GitHub</a>
-                        <span class="project-link disabled">Website: Coming Soon</span>
+                        <a href="https://github.com/Oasis-Company/AMAR-Engine" target="_blank" class="project-link" data-i18n="common.github">GitHub</a>
+                        <span class="project-link disabled" data-i18n="common.websiteComingSoon">Website: Coming Soon</span>
                     </div>
                 </div>
 
                 <!-- Wocon App -->
                 <div class="project-card">
-                    <h3 class="project-name">Wocon App</h3>
+                    <h3 class="project-name" data-i18n="projects.woconApp">Wocon App</h3>
                     <div class="project-links">
-                        <a href="https://github.com/Wocon-org" target="_blank" class="project-link">GitHub</a>
-                        <a href="https://wocon.pages.dev/" target="_blank" class="project-link">App</a>
+                        <a href="https://github.com/Wocon-org" target="_blank" class="project-link" data-i18n="common.github">GitHub</a>
+                        <a href="https://wocon.pages.dev/" target="_blank" class="project-link" data-i18n="common.app">App</a>
                     </div>
                 </div>
 
                 <!-- Urconomy -->
                 <div class="project-card">
-                    <h3 class="project-name">Urconomy</h3>
+                    <h3 class="project-name" data-i18n="projects.urconomy">Urconomy</h3>
                     <div class="project-links">
-                        <a href="https://github.com/zbbsdsb/Urconomy" target="_blank" class="project-link">GitHub</a>
-                        <span class="project-link disabled">Website: Coming Soon</span>
+                        <a href="https://github.com/zbbsdsb/Urconomy" target="_blank" class="project-link" data-i18n="common.github">GitHub</a>
+                        <span class="project-link disabled" data-i18n="common.websiteComingSoon">Website: Coming Soon</span>
                     </div>
                 </div>
             </div>
@@ -219,26 +219,26 @@
     <!-- Teams Section -->
     <section id="teams" class="teams-section">
         <div class="container">
-            <h2 class="section-title">Teams</h2>
-            <p class="section-subtitle">Our organizational structure</p>
+            <h2 class="section-title" data-i18n="teams.title">Teams</h2>
+            <p class="section-subtitle" data-i18n="teams.subtitle">Our organizational structure</p>
             
             <!-- Team List -->
-            <div class="teams-list">
+            <div class="teams-list grid grid-cols-1 md:grid-cols-2">
                 <div class="team-card">
-                    <h3 class="team-name">The Origin</h3>
-                    <p class="team-headquarters">Headquarters: China Mainland (2021-now)</p>
+                    <h3 class="team-name" data-i18n="teams.origin">The Origin</h3>
+                    <p class="team-headquarters" data-i18n="teams.originHeadquarters">Headquarters: China Mainland (2021-now)</p>
                 </div>
                 <div class="team-card">
-                    <h3 class="team-name">The Gaia</h3>
-                    <p class="team-headquarters">Headquarters: Unknown (2023-now)</p>
+                    <h3 class="team-name" data-i18n="teams.gaia">The Gaia</h3>
+                    <p class="team-headquarters" data-i18n="teams.gaiaHeadquarters">Headquarters: Unknown (2023-now)</p>
                 </div>
             </div>
 
             <!-- Founding Team -->
             <div class="founding-team">
-                <h3 class="founding-team-title">Founding Team</h3>
+                <h3 class="founding-team-title" data-i18n="teams.foundingTeam">Founding Team</h3>
                 <div class="founding-member">
-                    <span class="member-role">CEO:</span>
+                    <span class="member-role" data-i18n="teams.ceo">CEO:</span>
                     <a href="https://ceaserlab.github.io" target="_blank" class="member-name">Ceaser Zhao</a>
                 </div>
             </div>
@@ -248,12 +248,12 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <p class="section-subtitle">Get in touch with us</p>
+            <h2 class="section-title" data-i18n="contact.title">Contact Us</h2>
+            <p class="section-subtitle" data-i18n="contact.subtitle">Get in touch with us</p>
             <div class="contact-content">
                 <div class="contact-info">
                     <a href="mailto:oasiscompany@oermos.com" class="contact-link">oasiscompany@oermos.com</a>
-                    <p class="contact-note">contactOasisComapny.com (Currently unavailable)</p>
+                    <p class="contact-note" data-i18n="contact.note">contactOasisComapny.com (Currently unavailable)</p>
                 </div>
             </div>
         </div>
@@ -264,15 +264,15 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <span class="logo-text">Oasis Company</span>
+                    <span class="logo-text" data-i18n="logo">Oasis Company</span>
                 </div>
                 <div class="footer-info">
-                    <p class="footer-since">Established: 2021.11.02</p>
-                    <p class="footer-mission">Our mission is to create the universe</p>
+                    <p class="footer-since" data-i18n="footer.established">Established: 2021.11.02</p>
+                    <p class="footer-mission" data-i18n="hero.subtitle">Our mission is to create the universe</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Oasis Company. All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2026 Oasis Company. All rights reserved.</p>
             </div>
         </div>
     </footer>

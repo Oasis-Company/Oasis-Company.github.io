@@ -1,5 +1,139 @@
 // Main JavaScript file for Oasis Company portal
 
+// Navigation scroll effect
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        if (window.scrollY > 50) {
+            navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+            navbar.style.padding = '0';
+        } else {
+            navbar.style.boxShadow = 'none';
+            navbar.style.padding = '0';
+        }
+    }
+});
+
+// Translation data
+const translations = {
+    en: {
+        logo: 'Oasis Company',
+        nav: {
+            home: 'Home',
+            suborganizations: 'Suborganizations',
+            projects: 'Projects',
+            teams: 'Teams',
+            contact: 'Contact'
+        },
+        hero: {
+            title: 'Oasis Company',
+            subtitle: 'Our mission is to create the universe',
+            description: 'We explore from the essence of the world. Welcome to join us. We are Oasis Company.',
+            cta: 'Explore Our Ecosystem'
+        },
+        suborganizations: {
+            title: 'Suborganizations',
+            subtitle: 'Our affiliated institutions',
+            wocon: 'Wocon',
+            oits: 'OITS',
+            eme: 'EME',
+            aiLab: 'Oasis AI Lab',
+            androidStudio: 'Oasis Android Studio'
+        },
+        projects: {
+            title: 'Projects',
+            subtitle: 'Our key initiatives',
+            amarEngine: 'Amar Engine',
+            woconApp: 'Wocon App',
+            urconomy: 'Urconomy'
+        },
+        teams: {
+            title: 'Teams',
+            subtitle: 'Our organizational structure',
+            origin: 'The Origin',
+            originHeadquarters: 'Headquarters: China Mainland (2021-now)',
+            gaia: 'The Gaia',
+            gaiaHeadquarters: 'Headquarters: Unknown (2023-now)',
+            foundingTeam: 'Founding Team',
+            ceo: 'CEO:'
+        },
+        contact: {
+            title: 'Contact Us',
+            subtitle: 'Get in touch with us',
+            note: 'contactOasisComapny.com (Currently unavailable)'
+        },
+        footer: {
+            established: 'Established: 2021.11.02',
+            copyright: '&copy; 2026 Oasis Company. All rights reserved.'
+        },
+        common: {
+            github: 'GitHub',
+            website: 'Website',
+            app: 'App',
+            githubComingSoon: 'GitHub: Coming Soon',
+            websiteComingSoon: 'Website: Coming Soon'
+        }
+    },
+    zh: {
+        logo: '绿洲公司',
+        nav: {
+            home: '首页',
+            suborganizations: '子机构',
+            projects: '项目',
+            teams: '团队',
+            contact: '联系我们'
+        },
+        hero: {
+            title: '绿洲公司',
+            subtitle: '我们的使命是创造宇宙',
+            description: '我们从世界的本质出发探索。欢迎加入我们。我们是绿洲公司。',
+            cta: '探索我们的生态系统'
+        },
+        suborganizations: {
+            title: '子机构',
+            subtitle: '我们的附属机构',
+            wocon: '沃康',
+            oits: '绿洲科技学院',
+            eme: '伊多隆',
+            aiLab: '绿洲人工智能实验室',
+            androidStudio: '绿洲安卓工作室'
+        },
+        projects: {
+            title: '项目',
+            subtitle: '我们的关键举措',
+            amarEngine: '阿玛引擎',
+            woconApp: '沃康应用',
+            urconomy: '乌尔经济'
+        },
+        teams: {
+            title: '团队',
+            subtitle: '我们的组织结构',
+            origin: '起源',
+            originHeadquarters: '总部: 中国大陆 (2021-至今)',
+            gaia: '盖亚',
+            gaiaHeadquarters: '总部: 未知 (2023-至今)',
+            foundingTeam: '创始团队',
+            ceo: '首席执行官:'
+        },
+        contact: {
+            title: '联系我们',
+            subtitle: '与我们取得联系',
+            note: 'contactOasisComapny.com (目前不可用)'
+        },
+        footer: {
+            established: '成立于: 2021.11.02',
+            copyright: '&copy; 2026 绿洲公司。保留所有权利。'
+        },
+        common: {
+            github: 'GitHub',
+            website: '网站',
+            app: '应用',
+            githubComingSoon: 'GitHub: 即将推出',
+            websiteComingSoon: '网站: 即将推出'
+        }
+    }
+};
+
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all functionality
@@ -193,55 +327,142 @@ function initLanguageSelector() {
         const savedLanguage = localStorage.getItem('language');
         if (savedLanguage) {
             languageSelect.value = savedLanguage;
+        } else {
+            // Set default language based on browser preference
+            const browserLanguage = navigator.language || navigator.userLanguage;
+            const defaultLanguage = browserLanguage.startsWith('zh') ? 'zh' : 'en';
+            languageSelect.value = defaultLanguage;
         }
+        
+        // Initialize page with current language
+        translatePage(languageSelect.value);
         
         // Language change event listener
         languageSelect.addEventListener('change', function() {
             const selectedLanguage = this.value;
             localStorage.setItem('language', selectedLanguage);
-            
-            // Here you would typically trigger language translation
-            // For now, we'll just log the change
-            console.log('Language changed to:', selectedLanguage);
-            
-            // You could add translation logic here
-            // translatePage(selectedLanguage);
+            translatePage(selectedLanguage);
         });
     }
 }
 
-// Card animations
+// Translation function
+function translatePage(language) {
+    // Get all elements with data-i18n attribute
+    const elements = document.querySelectorAll('[data-i18n]');
+    
+    elements.forEach(function(element) {
+        const key = element.getAttribute('data-i18n');
+        let translation = getTranslation(key, language);
+        
+        if (translation) {
+            // Check if translation contains HTML
+            if (translation.includes('&')) {
+                element.innerHTML = translation;
+            } else {
+                element.textContent = translation;
+            }
+        }
+    });
+    
+    // Update page title
+    const pageTitle = document.querySelector('title');
+    if (pageTitle) {
+        const isChinese = language === 'zh';
+        pageTitle.textContent = isChinese ? '绿洲公司 - 创造宇宙' : 'Oasis Company - Creating the Universe';
+    }
+    
+    // Update document language attribute
+    document.documentElement.lang = language;
+}
+
+// Helper function to get translation
+function getTranslation(key, language) {
+    const keys = key.split('.');
+    let translation = translations[language];
+    
+    for (const k of keys) {
+        if (translation && translation[k] !== undefined) {
+            translation = translation[k];
+        } else {
+            return null;
+        }
+    }
+    
+    return translation;
+}
+
+// Card animations - Enhanced with Swiss design inspired micro-interactions
 function initCardAnimations() {
     const cards = document.querySelectorAll('.suborg-card, .project-card, .team-card');
     
     cards.forEach(function(card) {
+        // Add initial state
+        card.style.transform = 'translateY(0) scale(1)';
+        card.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+        
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
+            this.style.transform = 'translateY(-8px) scale(1.02)';
+            this.style.boxShadow = '0 16px 32px rgba(0, 0, 0, 0.12)';
         });
         
         card.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
+        });
+        
+        // Add focus effect for keyboard navigation
+        card.addEventListener('focusin', function() {
+            this.style.transform = 'translateY(-8px) scale(1.02)';
+            this.style.boxShadow = '0 16px 32px rgba(0, 0, 0, 0.12)';
+        });
+        
+        card.addEventListener('focusout', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+            this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
         });
     });
 }
 
-// Animations on scroll
+// Animations on scroll - Enhanced with performance optimization
 function initAnimations() {
-    // Add scroll event listener for animations
-    window.addEventListener('scroll', animateOnScroll);
+    // Add scroll event listener with throttle for better performance
+    window.addEventListener('scroll', throttle(animateOnScroll, 16));
+    
+    // Initial check for visible elements
+    animateOnScroll();
 }
 
 function animateOnScroll() {
-    const elements = document.querySelectorAll('.suborg-card, .project-card, .team-card, .section-title, .section-subtitle');
+    const elements = document.querySelectorAll('.suborg-card, .project-card, .team-card, .section-title, .section-subtitle, .cta-button, .contact-link');
     
     elements.forEach(function(element) {
+        // Skip elements that are already animated
+        if (element.classList.contains('animated')) {
+            return;
+        }
+        
         const elementPosition = element.getBoundingClientRect().top;
         const windowHeight = window.innerHeight;
         
-        if (elementPosition < windowHeight - 100) {
-            element.classList.add('fade-in-up');
+        if (elementPosition < windowHeight - 80) {
+            element.classList.add('fade-in-up', 'animated');
         }
     });
+}
+
+// Throttle function for performance optimization
+function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
 }
 
 // Add keyboard accessibility
@@ -267,11 +488,4 @@ function scrollToTop() {
         top: 0,
         behavior: 'smooth'
     });
-}
-
-// Translation function (placeholder)
-function translatePage(language) {
-    // This would be implemented with your translation logic
-    console.log('Translating page to:', language);
-    // Example: Update text content based on selected language
 }
