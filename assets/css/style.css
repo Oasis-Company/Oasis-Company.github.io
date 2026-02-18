@@ -289,52 +289,76 @@ body {
     background: var(--background-light);
 }
 
-/* Preloader */
+/* Preloader - 1秒极简高级启动动画 */
 .preloader {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--background);
+    background: #f5f5f5;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 9999;
-    transition: opacity var(--transition-long);
-}
-
-.preloader.hidden {
     opacity: 0;
-    pointer-events: none;
+    transition: opacity 0.2s ease;
 }
 
-.preloader-content {
-    text-align: center;
+.preloader.active {
+    opacity: 1;
 }
 
-.preloader-logo {
+.preloader.fade-out {
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.45s ease-out;
+}
+
+.preloader.active .logo-container {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.logo-graphics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text {
     font-size: var(--font-size-3xl);
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     color: var(--primary);
-    margin-bottom: var(--spacing-md);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.1em;
+    opacity: 0;
+    transform: scale(0.96);
+    transition: all 0.45s ease-out 0.35s;
 }
 
-.preloader-spinner {
-    width: 40px;
-    height: 40px;
-    border: 3px solid var(--border-color);
-    border-top: 3px solid var(--primary);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin: 0 auto;
+.preloader.active .logo-text {
+    opacity: 1;
+    transform: scale(1);
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+/* Main Content */
+.main-content {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.main-content.visible {
+    opacity: 1;
 }
 
 /* Scroll Progress Bar */
