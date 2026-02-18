@@ -131,6 +131,122 @@ const translations = {
             githubComingSoon: 'GitHub: 即将推出',
             websiteComingSoon: '网站: 即将推出'
         }
+    },
+    hi: {
+        logo: 'ओएसिस कंपनी',
+        nav: {
+            home: 'होम',
+            suborganizations: 'उप-संगठन',
+            projects: 'परियोजनाएँ',
+            teams: 'टीमें',
+            contact: 'संपर्क करें'
+        },
+        hero: {
+            title: 'ओएसिस कंपनी',
+            subtitle: 'हमारा मिशन ब्रह्मांड बनाना है',
+            description: 'हम दुनिया के सार से अन्वेषण करते हैं। हमसे जुड़ने के लिए आपका स्वागत है। हम ओएसिस कंपनी हैं।',
+            cta: 'हमारा पारिस्थितिकी तंत्र अन्वेषित करें'
+        },
+        suborganizations: {
+            title: 'उप-संगठन',
+            subtitle: 'हमारे संबद्ध संस्थान',
+            wocon: 'वोकॉन',
+            oits: 'ओएसिस प्रौद्योगिकी संस्थान',
+            eme: 'ईडोलॉन',
+            aiLab: 'ओएसिस AI प्रयोगशाला',
+            androidStudio: 'ओएसिस एंड्रॉइड स्टूडियो'
+        },
+        projects: {
+            title: 'परियोजनाएँ',
+            subtitle: 'हमारी प्रमुख पहलें',
+            amarEngine: 'अमर इंजन',
+            woconApp: 'वोकॉन ऐप',
+            urconomy: 'यूर्कोनॉमी'
+        },
+        teams: {
+            title: 'टीमें',
+            subtitle: 'हमारी संगठनात्मक संरचना',
+            origin: 'मूल',
+            originHeadquarters: 'मुख्यालय: चीन मुख्य भूमि (2021-अब)',
+            gaia: 'गाया',
+            gaiaHeadquarters: 'मुख्यालय: अज्ञात (2023-अब)',
+            foundingTeam: 'संस्थापक टीम',
+            ceo: 'सीईओ:'
+        },
+        contact: {
+            title: 'संपर्क करें',
+            subtitle: 'हमसे संपर्क करें',
+            note: 'contactOasisComapny.com (वर्तमान में अनुपलब्ध)'
+        },
+        footer: {
+            established: 'स्थापित: 2021.11.02',
+            copyright: '&copy; 2026 ओएसिस कंपनी। सभी अधिकार सुरक्षित।'
+        },
+        common: {
+            github: 'GitHub',
+            website: 'वेबसाइट',
+            app: 'ऐप',
+            githubComingSoon: 'GitHub: आने वाला है',
+            websiteComingSoon: 'वेबसाइट: आने वाली है'
+        }
+    },
+    es: {
+        logo: 'Oasis Company',
+        nav: {
+            home: 'Inicio',
+            suborganizations: 'Suborganizaciones',
+            projects: 'Proyectos',
+            teams: 'Equipos',
+            contact: 'Contacto'
+        },
+        hero: {
+            title: 'Oasis Company',
+            subtitle: 'Nuestra misión es crear el universo',
+            description: 'Exploramos desde la esencia del mundo. Bienvenido a unirte a nosotros. Somos Oasis Company.',
+            cta: 'Explora Nuestro Ecosistema'
+        },
+        suborganizations: {
+            title: 'Suborganizaciones',
+            subtitle: 'Nuestras instituciones afiliadas',
+            wocon: 'Wocon',
+            oits: 'Instituto de Tecnología Oasis',
+            eme: 'Eidolon',
+            aiLab: 'Laboratorio de IA de Oasis',
+            androidStudio: 'Estudio Android de Oasis'
+        },
+        projects: {
+            title: 'Proyectos',
+            subtitle: 'Nuestras iniciativas clave',
+            amarEngine: 'Motor Amar',
+            woconApp: 'Aplicación Wocon',
+            urconomy: 'Urconomía'
+        },
+        teams: {
+            title: 'Equipos',
+            subtitle: 'Nuestra estructura organizativa',
+            origin: 'El Origen',
+            originHeadquarters: 'Sede: China Continental (2021-ahora)',
+            gaia: 'La Gaia',
+            gaiaHeadquarters: 'Sede: Desconocida (2023-ahora)',
+            foundingTeam: 'Equipo Fundador',
+            ceo: 'CEO:'
+        },
+        contact: {
+            title: 'Contáctanos',
+            subtitle: 'Ponte en contacto con nosotros',
+            note: 'contactOasisComapny.com (Actualmente no disponible)'
+        },
+        footer: {
+            established: 'Fundada: 2021.11.02',
+            copyright: '&copy; 2026 Oasis Company. Todos los derechos reservados.'
+        },
+        common: {
+            github: 'GitHub',
+            website: 'Sitio web',
+            app: 'Aplicación',
+            githubComingSoon: 'GitHub: Próximamente',
+            websiteComingSoon: 'Sitio web: Próximamente'
+        }
     }
 };
 
