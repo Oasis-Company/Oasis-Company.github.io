@@ -446,7 +446,16 @@ function initLanguageSelector() {
         } else {
             // Set default language based on browser preference
             const browserLanguage = navigator.language || navigator.userLanguage;
-            const defaultLanguage = browserLanguage.startsWith('zh') ? 'zh' : 'en';
+            let defaultLanguage = 'en';
+            
+            if (browserLanguage.startsWith('zh')) {
+                defaultLanguage = 'zh';
+            } else if (browserLanguage.startsWith('hi')) {
+                defaultLanguage = 'hi';
+            } else if (browserLanguage.startsWith('es')) {
+                defaultLanguage = 'es';
+            }
+            
             languageSelect.value = defaultLanguage;
         }
         
@@ -484,8 +493,21 @@ function translatePage(language) {
     // Update page title
     const pageTitle = document.querySelector('title');
     if (pageTitle) {
-        const isChinese = language === 'zh';
-        pageTitle.textContent = isChinese ? '绿洲公司 - 创造宇宙' : 'Oasis Company - Creating the Universe';
+        let titleText = 'Oasis Company - Creating the Universe';
+        
+        switch (language) {
+            case 'zh':
+                titleText = '绿洲公司 - 创造宇宙';
+                break;
+            case 'hi':
+                titleText = 'ओएसिस कंपनी - ब्रह्मांड बनाना';
+                break;
+            case 'es':
+                titleText = 'Oasis Company - Creando el Universo';
+                break;
+        }
+        
+        pageTitle.textContent = titleText;
     }
     
     // Update document language attribute
