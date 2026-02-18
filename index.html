@@ -60,11 +60,22 @@
 <body>
     <!-- Preloader -->
     <div class="preloader" id="preloader">
-        <div class="preloader-content">
-            <div class="preloader-logo">Oasis</div>
-            <div class="preloader-spinner"></div>
+        <div class="logo-container">
+            <div class="logo-graphics">
+                <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Sun -->
+                    <circle cx="60" cy="40" r="20" fill="#00B4AB"/>
+                    <!-- Waves -->
+                    <path d="M20 60C30 50 40 55 50 50C60 45 70 55 80 50C90 45 100 55 110 50" stroke="#1E3A8A" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M20 68C30 58 40 63 50 58C60 53 70 63 80 58C90 53 100 63 110 58" stroke="#1E3A8A" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="logo-text">Oasis</div>
         </div>
     </div>
+    
+    <!-- Main Content Wrapper -->
+    <div class="main-content" id="main-content">
 
     <!-- Scroll Progress Bar -->
     <div class="scroll-progress" id="scroll-progress"></div>
@@ -280,5 +291,6 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    </div>
 </body>
 </html>
