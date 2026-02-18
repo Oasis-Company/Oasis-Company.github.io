@@ -264,19 +264,31 @@ document.addEventListener('DOMContentLoaded', function() {
     initAnimations();
 });
 
-// Preloader functionality
+// Preloader functionality - 1秒极简高级启动动画
 function initPreloader() {
     const preloader = document.getElementById('preloader');
+    const mainContent = document.getElementById('main-content');
     
-    if (preloader) {
-        // Hide preloader after content is loaded
-        window.addEventListener('load', function() {
+    if (preloader && mainContent) {
+        // Add active class when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
             setTimeout(function() {
-                preloader.classList.add('hidden');
-                // Trigger animations for visible elements
-                animateOnScroll();
-            }, 800);
+                preloader.classList.add('active');
+            }, 100);
         });
+        
+        // Start fade out after 850ms
+        setTimeout(function() {
+            preloader.classList.add('fade-out');
+        }, 850);
+        
+        // Remove preloader and show main content after 1000ms
+        setTimeout(function() {
+            preloader.style.display = 'none';
+            mainContent.classList.add('visible');
+            // Trigger animations for visible elements
+            animateOnScroll();
+        }, 1000);
     }
 }
 
