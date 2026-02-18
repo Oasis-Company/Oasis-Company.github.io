@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Oasis Company - 构建未来科技生态系统，连接各个创新项目">
-    <meta name="keywords" content="Oasis Company, 绿洲公司, 科技生态, 创新项目, Wocon, AMAR Engine, AMAR GENIS">
+    <meta name="description" content="Oasis Company - Our mission is to create the universe. We explore from the essence of the world. Welcome to join us.">
+    <meta name="keywords" content="Oasis Company, 绿洲公司, Wocon, OITS, EME, Oasis AI Lab, Amar Engine, Urconomy">
     <meta name="author" content="Oasis Company">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#00B4AB">
@@ -12,24 +12,23 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://oasis-company.github.io/">
-    <meta property="og:title" content="Oasis Company - 构建未来科技生态系统">
-    <meta property="og:description" content="Oasis Company 是一个创新科技生态系统，连接各个前沿项目">
+    <meta property="og:title" content="Oasis Company - Creating the Universe">
+    <meta property="og:description" content="Our mission is to create the universe. We explore from the essence of the world. Welcome to join us. We are Oasis Company.">
     <meta property="og:image" content="https://oasis-company.github.io/assets/images/oasis-logo.png">
     <meta property="og:site_name" content="Oasis Company">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://oasis-company.github.io/">
-    <meta property="twitter:title" content="Oasis Company - 构建未来科技生态系统">
-    <meta property="twitter:description" content="Oasis Company 是一个创新科技生态系统，连接各个前沿项目">
+    <meta property="twitter:title" content="Oasis Company - Creating the Universe">
+    <meta property="twitter:description" content="Our mission is to create the universe. We explore from the essence of the world. Welcome to join us. We are Oasis Company.">
     <meta property="twitter:image" content="https://oasis-company.github.io/assets/images/oasis-logo.png">
-    <meta property="twitter:site" content="@OasisCompany">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://oasis-company.github.io/">
 
-    <title>Oasis Company - 构建未来科技生态系统</title>
+    <title>Oasis Company - Creating the Universe</title>
     <link rel="icon" type="image/png" href="assets/images/oasis-logo.png">
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -41,25 +40,20 @@
         "name": "Oasis Company",
         "url": "https://oasis-company.github.io/",
         "logo": "https://oasis-company.github.io/assets/images/oasis-logo.png",
-        "description": "Oasis Company 是一个创新科技生态系统，连接各个前沿项目",
-        "sameAs": [],
-        "member": [
-            {
-                "@type": "Project",
-                "name": "Wocon",
-                "url": "https://wocon-org.github.io/"
-            },
-            {
-                "@type": "Project",
-                "name": "AMAR Engine",
-                "url": "https://oasis-company.github.io/AMAR-Engine/"
-            },
-            {
-                "@type": "Project",
-                "name": "AMAR GENIS",
-                "url": "https://oasis-company.github.io/AMAR-GENIS/"
-            }
-        ]
+        "description": "Our mission is to create the universe. We explore from the essence of the world. Welcome to join us. We are Oasis Company.",
+        "sameAs": [
+            "https://github.com/Oasis-Company"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "oasiscompany@oermos.com",
+            "contactType": "General"
+        },
+        "foundingDate": "2021-11-02",
+        "location": {
+            "@type": "Place",
+            "name": "China Mainland"
+        }
     }
     </script>
 </head>
@@ -76,38 +70,45 @@
     <div class="scroll-progress" id="scroll-progress"></div>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="back-to-top" onclick="scrollToTop()" aria-label="返回顶部" aria-hidden="true">
+    <button class="back-to-top" id="back-to-top" onclick="scrollToTop()" aria-label="Back to top" aria-hidden="true">
         ↑
     </button>
 
     <!-- Navigation Bar -->
-    <nav class="navbar" aria-label="主导航">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo" role="banner">
                 <span class="logo-text">Oasis Company</span>
             </div>
             
             <!-- Mobile Menu Button -->
-            <button class="mobile-menu-button" id="mobile-menu-button" onclick="toggleMobileMenu()" aria-expanded="false" aria-controls="nav-menu" aria-label="切换菜单">
+            <button class="mobile-menu-button" id="mobile-menu-button" onclick="toggleMobileMenu()" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
                 </svg>
             </button>
             
             <div class="nav-menu" id="nav-menu" role="menu">
-                <a href="#hero" class="nav-link" role="menuitem" tabindex="0">首页</a>
-                <a href="#projects" class="nav-link" role="menuitem" tabindex="0">项目</a>
-                <a href="#about" class="nav-link" role="menuitem" tabindex="0">关于我们</a>
-                <a href="#contact" class="nav-link" role="menuitem" tabindex="0">联系我们</a>
+                <a href="#hero" class="nav-link" role="menuitem" tabindex="0">Home</a>
+                <a href="#suborganizations" class="nav-link" role="menuitem" tabindex="0">Suborganizations</a>
+                <a href="#projects" class="nav-link" role="menuitem" tabindex="0">Projects</a>
+                <a href="#teams" class="nav-link" role="menuitem" tabindex="0">Teams</a>
+                <a href="#contact" class="nav-link" role="menuitem" tabindex="0">Contact</a>
             </div>
             <div class="nav-controls">
-                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题" aria-pressed="false">
+                <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" aria-pressed="false">
                     <span class="theme-icon" aria-hidden="true">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
                         </svg>
                     </span>
                 </button>
+                <div class="language-selector" aria-label="Language selector">
+                    <select id="language-select" class="language-select" aria-label="Select language">
+                        <option value="en" selected>English</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
             </div>
         </div>
     </nav>
@@ -116,14 +117,65 @@
     <section id="hero" class="hero-section">
         <div class="hero-container">
             <h1 class="hero-title">Oasis Company</h1>
-            <p class="hero-subtitle">构建未来科技生态系统</p>
+            <p class="hero-subtitle">Our mission is to create the universe</p>
             <p class="hero-description">
-                从这里开始，我们构建 Oasisverse，连接各个创新项目，
-                打造一个充满可能性的科技生态系统。
+                We explore from the essence of the world. Welcome to join us. We are Oasis Company.
             </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="cta-button">探索项目</a>
-                <a href="#about" class="cta-button secondary">了解更多</a>
+            <a href="#suborganizations" class="cta-button">Explore Our Ecosystem</a>
+        </div>
+    </section>
+
+    <!-- Suborganizations Section -->
+    <section id="suborganizations" class="suborganizations-section">
+        <div class="container">
+            <h2 class="section-title">Suborganizations</h2>
+            <p class="section-subtitle">Our affiliated institutions</p>
+            <div class="suborganizations-grid">
+                <!-- Wocon -->
+                <div class="suborg-card">
+                    <h3 class="suborg-name">Wocon</h3>
+                    <div class="suborg-links">
+                        <a href="https://github.com/Wocon-org" target="_blank" class="suborg-link">GitHub</a>
+                        <a href="https://wocon-org.github.io/" target="_blank" class="suborg-link">Website</a>
+                        <a href="https://wocon.pages.dev/" target="_blank" class="suborg-link">App</a>
+                    </div>
+                </div>
+
+                <!-- OITS -->
+                <div class="suborg-card">
+                    <h3 class="suborg-name">OITS</h3>
+                    <div class="suborg-links">
+                        <a href="https://github.com/Oasis-Institute-of-Technology-Science" target="_blank" class="suborg-link">GitHub</a>
+                        <a href="https://oasis-institute-of-technology-science.github.io/" target="_blank" class="suborg-link">Website</a>
+                    </div>
+                </div>
+
+                <!-- EME -->
+                <div class="suborg-card">
+                    <h3 class="suborg-name">EME</h3>
+                    <div class="suborg-links">
+                        <a href="https://github.com/Eidolon-org" target="_blank" class="suborg-link">GitHub</a>
+                        <a href="https://eidolon-org.github.io/" target="_blank" class="suborg-link">Website</a>
+                    </div>
+                </div>
+
+                <!-- Oasis AI Lab -->
+                <div class="suborg-card">
+                    <h3 class="suborg-name">Oasis AI Lab</h3>
+                    <div class="suborg-links">
+                        <span class="suborg-link disabled">GitHub: Coming Soon</span>
+                        <span class="suborg-link disabled">Website: Coming Soon</span>
+                    </div>
+                </div>
+
+                <!-- Oasis Android Studio -->
+                <div class="suborg-card">
+                    <h3 class="suborg-name">Oasis Android Studio</h3>
+                    <div class="suborg-links">
+                        <a href="https://github.com/OasisAndroidApp" target="_blank" class="suborg-link">GitHub</a>
+                        <span class="suborg-link disabled">Website: Coming Soon</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -131,93 +183,63 @@
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
         <div class="container">
-            <h2 class="section-title">生态系统项目</h2>
-            <p class="section-subtitle">探索我们的创新项目</p>
+            <h2 class="section-title">Projects</h2>
+            <p class="section-subtitle">Our key initiatives</p>
             <div class="projects-grid">
-                <!-- Wocon Project -->
+                <!-- Amar Engine -->
                 <div class="project-card">
-                    <div class="project-icon wocon-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                        </svg>
-                    </div>
-                    <h3 class="project-name">Wocon</h3>
-                    <p class="project-description">旅游社交应用，帮助用户找到旅游伙伴，发现新地方，一起探索世界。</p>
+                    <h3 class="project-name">Amar Engine</h3>
                     <div class="project-links">
-                        <a href="https://wocon-org.github.io/" target="_blank" class="project-link">官方网站</a>
-                        <a href="https://github.com/wocon-org/wocon_pages" target="_blank" class="project-link">GitHub 仓库</a>
+                        <a href="https://github.com/Oasis-Company/AMAR-Engine" target="_blank" class="project-link">GitHub</a>
+                        <span class="project-link disabled">Website: Coming Soon</span>
                     </div>
                 </div>
 
-                <!-- AMAR Engine Project -->
+                <!-- Wocon App -->
                 <div class="project-card">
-                    <div class="project-icon amar-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
-                        </svg>
-                    </div>
-                    <h3 class="project-name">AMAR Engine</h3>
-                    <p class="project-description">先进的元宇宙引擎，提供强大的虚拟世界构建和管理能力。</p>
+                    <h3 class="project-name">Wocon App</h3>
                     <div class="project-links">
-                        <a href="https://github.com/Oasis-Company/AMAR-Engine" target="_blank" class="project-link">GitHub 仓库</a>
+                        <a href="https://github.com/Wocon-org" target="_blank" class="project-link">GitHub</a>
+                        <a href="https://wocon.pages.dev/" target="_blank" class="project-link">App</a>
                     </div>
                 </div>
 
-                <!-- AMAR GENIS Project -->
+                <!-- Urconomy -->
                 <div class="project-card">
-                    <div class="project-icon genis-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <h3 class="project-name">AMAR GENIS</h3>
-                    <p class="project-description">通用物理仿真系统，为虚拟环境提供真实的物理模拟能力。</p>
+                    <h3 class="project-name">Urconomy</h3>
                     <div class="project-links">
-                        <a href="https://github.com/Oasis-Company/AMAR-GENIS" target="_blank" class="project-link">GitHub 仓库</a>
-                    </div>
-                </div>
-
-                <!-- Metaclass Project -->
-                <div class="project-card">
-                    <div class="project-icon metaclass-icon">
-                        <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="project-name">Metaclass</h3>
-                    <p class="project-description">元类系统，为复杂应用提供灵活的类型定义和管理机制。</p>
-                    <div class="project-links">
-                        <a href="https://github.com/Oasis-Company/Metaclass" target="_blank" class="project-link">GitHub 仓库</a>
+                        <a href="https://github.com/zbbsdsb/Urconomy" target="_blank" class="project-link">GitHub</a>
+                        <span class="project-link disabled">Website: Coming Soon</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
+    <!-- Teams Section -->
+    <section id="teams" class="teams-section">
         <div class="container">
-            <h2 class="section-title">关于我们</h2>
-            <p class="section-subtitle">我们的使命和愿景</p>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>我们的使命</h3>
-                    <p>
-                        Oasis Company 致力于构建一个充满创新和可能性的科技生态系统，
-                        通过连接各个前沿项目，推动技术进步，为用户创造更美好的数字体验。
-                    </p>
-                    <h3>我们的愿景</h3>
-                    <p>
-                        我们希望打造 Oasisverse，一个融合了各种创新技术的虚拟世界，
-                        让人们能够在其中自由探索、创造和连接。
-                    </p>
-                    <h3>核心价值观</h3>
-                    <ul class="values-list">
-                        <li>创新：不断探索新技术和新方法</li>
-                        <li>协作：与社区和合作伙伴共同成长</li>
-                        <li>开放：保持开放的心态和开放的技术</li>
-                        <li>卓越：追求技术和产品的卓越品质</li>
-                    </ul>
+            <h2 class="section-title">Teams</h2>
+            <p class="section-subtitle">Our organizational structure</p>
+            
+            <!-- Team List -->
+            <div class="teams-list">
+                <div class="team-card">
+                    <h3 class="team-name">The Origin</h3>
+                    <p class="team-headquarters">Headquarters: China Mainland (2021-now)</p>
+                </div>
+                <div class="team-card">
+                    <h3 class="team-name">The Gaia</h3>
+                    <p class="team-headquarters">Headquarters: Unknown (2023-now)</p>
+                </div>
+            </div>
+
+            <!-- Founding Team -->
+            <div class="founding-team">
+                <h3 class="founding-team-title">Founding Team</h3>
+                <div class="founding-member">
+                    <span class="member-role">CEO:</span>
+                    <a href="https://ceaserlab.github.io" target="_blank" class="member-name">Ceaser Zhao</a>
                 </div>
             </div>
         </div>
@@ -226,20 +248,12 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">联系我们</h2>
-            <p class="section-subtitle">加入我们的生态系统</p>
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">Get in touch with us</p>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>联系方式</h3>
-                    <p>如果您对我们的项目感兴趣，或者想要加入我们的生态系统，欢迎通过以下方式联系我们：</p>
-                    <ul class="contact-list">
-                        <li>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                            </svg>
-                            <span>GitHub: <a href="https://github.com/Oasis-Company" target="_blank">Oasis-Company</a></span>
-                        </li>
-                    </ul>
+                    <a href="mailto:oasiscompany@oermos.com" class="contact-link">oasiscompany@oermos.com</a>
+                    <p class="contact-note">contactOasisComapny.com (Currently unavailable)</p>
                 </div>
             </div>
         </div>
@@ -252,18 +266,9 @@
                 <div class="footer-logo">
                     <span class="logo-text">Oasis Company</span>
                 </div>
-                <div class="footer-links">
-                    <a href="#hero">首页</a>
-                    <a href="#projects">项目</a>
-                    <a href="#about">关于我们</a>
-                    <a href="#contact">联系我们</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://github.com/Oasis-Company" target="_blank" aria-label="GitHub">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                    </a>
+                <div class="footer-info">
+                    <p class="footer-since">Established: 2021.11.02</p>
+                    <p class="footer-mission">Our mission is to create the universe</p>
                 </div>
             </div>
             <div class="footer-bottom">
